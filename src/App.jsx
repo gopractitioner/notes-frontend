@@ -48,7 +48,6 @@ const App = () => {
   const toggleImportanceOf = (id) => {
     const note = notes.find(note => note.id === id)
     const changedNote = { ...note, important: !note.important }
-    console.log('changedNote:', changedNote)
     noteService.update(id, changedNote)
       //axios.put(url, changedNote)
       .then(returnedNote => {
@@ -58,6 +57,7 @@ const App = () => {
         // alert(
         //   `the note '${note.content}' was already deleted from server`
         // )
+        //console.log('error:', error)
         setErrorMessage(
           `Note '${note.content}' was already removed from server`
         )
