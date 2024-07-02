@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-//const baseURL = 'https://part3-notes-backend-j7oq.onrender.com/api/notes'
-const baseURL = 'http://localhost:10000/api/notes'
+const baseURL = 'https://part3-notes-backend-j7oq.onrender.com/api/notes'
+//const baseURL = 'http://localhost:10000/api/notes'
 const getAll = () => {
     const request = axios.get(baseURL)
     const nonExisting = {
